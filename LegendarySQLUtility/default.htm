@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TypeScript HTML App</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" />
+                    Legendary Apps
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Left Navigation -->
+    <div id="leftnav">
+        <a href="#">HTML App</a>
+        <a href="#">Link 2</a>
+
+        <div id="history">
+            <h4>History</h4>
+            <div id="historycontent">
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-default">Copy to Clipboard</button>
+                    <textarea id="inputText" class="codeInputArea" rows="15"></textarea>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 5px;">
+                <!-- Give it a nudge of padding -->
+                <div class="col-md-12">
+                    <div class="btn-group">
+                        <button id="cmdListToValuesClause" onclick="listToValuesClause()" type="button" class="btn btn-default">List to VALUES clause</button>
+                        <button id="cmdListToSelectUnionAll" onclick="listToSelectUnionAll()" type="button" class="btn btn-default">List to SELECT/UNION ALL</button>
+                        <button id="cmdListToInClause" onclick="listToInClause()" type="button" class="btn btn-default">List to IN clause</button>
+                        <button id="cmdListToColumnHeaders" onclick="listToColumnHeaders()" type="button" class="btn btn-default">List to Column Headers</button>
+                        <button id="cmdTextToVBString" onclick="textToVBString()" type="button" class="btn btn-default">List to VB String</button>
+                        <button id="cmdTextToCSV" onclick="textToCSV()" type="button" value="Convert to CSV" class="btn btn-default"></button>
+                        <button id="cmdTextTemplate" onclick="textTemplate()" type="button" value="TextTemplate" class="btn btn-default"></button>
+                        Tab: <input id="rdoTabDelimited" name="delimiterStyle" type="radio" checked="checked" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea id="outputText" class="codeInputArea" rows="15"></textarea>
+                    <input id="cmdDownloadResultsAsText" onclick="downloadResultsAsText()" type="button" value="Download As Text" class="btn btn-default" />
+                    <input id="cmdCopyBottom" type="button" value="Copy to clipboard" class="btn btn-default" />
+                </div>
+            </div>
+
+            <!--
+            <br />
+            <input  type="button" value="List to VALUES clause" />
+            <input  type="button" value="List to SELECT/UNION ALL" />
+            <input value="List to IN clause" />
+            <input type="button" value="List to Column Headers" />
+            <input type="button" value="Convert to VB String" />
+            
+            <br />
+            
+            <br /><br />
+            <textarea  cols="100" rows="15"></textarea><br />
+            
+            -->
+
+            </div>
+        </div>
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
